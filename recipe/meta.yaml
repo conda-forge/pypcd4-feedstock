@@ -1,5 +1,5 @@
 {% set name = "pypcd4" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pypcd4-{{ version }}.tar.gz
-  sha256: 9785562de694a411151febca2c75e2e1571795adc87800cb26e3d98165286988
+  sha256: a10e4769d74691eb1e564304005c98c7693b17522cffaa53c3513f812e597469
 
 build:
   noarch: python
