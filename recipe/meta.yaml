@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pypcd4-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pypcd4-{{ version }}.tar.gz
   sha256: a10e4769d74691eb1e564304005c98c7693b17522cffaa53c3513f812e597469
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8.2
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
     - pip
   run:
-    - python >=3.8.2
+    - python >={{ python_min }}
     - numpy >=1.21.0
     - python-lzf >=0.2.4
     - pydantic >=1.10.8,<=2.6.4
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Read and write PCL .pcd files in python
