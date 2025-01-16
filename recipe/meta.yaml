@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.21.0
     - python-lzf >=0.2.4
-    - pydantic >=1.10.8,<=2.6.4
+    - pydantic >=1.10.8,<3.0.0
 
 test:
   imports:
