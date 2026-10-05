@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.0"
+  version: "1.5.1"
 
 package:
   name: pypcd4
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pypcd4/pypcd4-${{ version }}.tar.gz
-  sha256: 6e98dd1594499e18185d0675f66479b826bcfe19e9e93e176f710119bc96db74
+  sha256: 5427584a1b749b2d243baa4006ca4c62b9a3880a127c838c9ac9e5c7e9486ee4
 
 build:
   number: 0
